@@ -31,13 +31,14 @@ function getUpSeconds() {
 // ########## API ##########
 
 app.get("/api/temperature", async(request, response) => {
-    const temp = await getTemperature();
+    const temperature_path = "/sys/class/thermal/thermal_zone4/temp";
+    const temp = await getTemperature(temperature_path);
     // console.log(`Temperature ${temp}`);
     
     if (temp === null) {
         return response.status(503).json({
             error: "Temperature unavailable",
-            details: "Could not read from /sys/class/thermal/thermal_zone0/temp",
+            details: `Could not read from ${temperature_path}`,
         });
     }
 
@@ -53,7 +54,8 @@ app.get("/api/uptime", async(request, response) => {
 
 
 app.get("/api", async(request, response) => {
-    const temp = await getTemperature();
+    const temperature_path = "/sys/class/thermal/thermal_zone3/temp";
+    const temp = await getTemperature(temperature_path);
     const uptime = getUpSeconds();
 
     response.send({ 
