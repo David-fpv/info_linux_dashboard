@@ -25,9 +25,9 @@ function UpdateHTML(temperature_value, uptime_value) {
     const uptime_v = document.getElementById("uptime");
     const human_time = secondToHumanTime(uptime_value);
     
-    const seconds_text = human_time.seconds < 10 ? `0${human_time.seconds}s` : `${human_time.seconds}s`;
-    const minutes_text = human_time.minutes < 10 ? `0${human_time.minutes}m` : `${human_time.minutes}m`;
-    uptime_v.innerText = `${seconds_text} ${minutes_text} ${human_time.hours}h ${human_time.days}d`;
+    const seconds_text = human_time.seconds < 10 ? `0${human_time.seconds}` : `${human_time.seconds}`;
+    const minutes_text = human_time.minutes < 10 ? `0${human_time.minutes}` : `${human_time.minutes}`;
+    uptime_v.innerText = `${human_time.days} days ${human_time.hours}:${minutes_text}:${seconds_text}`;
 }
 
 
