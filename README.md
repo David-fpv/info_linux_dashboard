@@ -11,6 +11,8 @@ and the frontend uses HTML + Bootstrap + JavaScript.
  
  1. `git clone https://github.com/David-fpv/info_linux_dashboard.git`
 
- 2. `npm install`
+ 2. `cd info_linux_dashboard/`
+ 
+ 3. `npm install`
 
- 3. `npm start`
+ 4. `npm start`

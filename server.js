@@ -14,7 +14,7 @@ async function getTemperature(tempPath = "/sys/class/thermal/thermal_zone0/temp"
     const data = await fs.readFile(tempPath, { encoding: 'utf8' });
     const raw = Number(data.trim());
     if (!Number.isFinite(raw)) throw new Error("Invalid temperature value")
-    return raw / 1000; // in °C
+    return (raw / 1000).toFixed(2); // in °C
   } catch (err) {
     console.error("getTemperature error:", err.message);
     return null;
@@ -65,4 +65,4 @@ app.get("/api", async(request, response) => {
 });
 
 
-app.listen(3000, () => console.log("Server await connection on http://127.0.0.1:3000"));
+app.listen(3000, () => console.log("Server await connection on http://<your_ip_address>:3000"));
