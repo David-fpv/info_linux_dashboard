@@ -11,7 +11,7 @@ async function getData() {
 function secondToHumanTime(timeInSeconds) {
     seconds = timeInSeconds % 60;
     minutes = Math.floor(timeInSeconds / 60) % 60;
-    hours = Math.floor(timeInSeconds / (60 * 60)); 
+    hours = Math.floor(timeInSeconds / (60 * 60)) % 24; 
     days = Math.floor(timeInSeconds / (24 * 60 * 60));
     return {days, hours, minutes, seconds};
 }
@@ -26,7 +26,6 @@ function UpdateHTML(temperature_value, uptime_value) {
     const human_time = secondToHumanTime(uptime_value);
     uptime_v.innerText = `${human_time.seconds}s ${human_time.minutes}m ${human_time.hours}h ${human_time.days}d`;
 }
-
 
 
 function updateTemperatureProgress(valueC, minC = 10, maxC = 130) {
