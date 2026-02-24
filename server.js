@@ -66,5 +66,3 @@ app.get("/api", async(request, response) => {
 
 
 app.listen(3000, () => console.log("Server await connection on http://127.0.0.1:3000"));
-
-
