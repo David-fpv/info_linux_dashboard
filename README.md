@@ -9,10 +9,8 @@ and the frontend uses HTML + Bootstrap + JavaScript.
 
 ### Quick start:
  
- 1. `git clone this repository`
+ 1. `git clone https://github.com/David-fpv/info_linux_dashboard.git`
 
- 2. `npm init -y`
+ 2. `npm install`
 
- 3. `npm install express`
-
- 4. `npm start`
+ 3. `npm start`

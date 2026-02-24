@@ -1,0 +1,25 @@
+{
+  "name": "info_web_api",
+  "version": "1.0.0",
+  "description": "It's a simple info dashboard for Raspberry Pi. You can also use it for other Linux devices (though you may need to adjust a few things).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-fpv/info_linux_dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/David-fpv/info_linux_dashboard/issues"
+  },
+  "homepage": "https://github.com/David-fpv/info_linux_dashboard#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
